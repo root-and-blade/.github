@@ -108,6 +108,6 @@ EOT
     echo "    Copying $script..."
     rm -rf "$PROJECT_DIR/.git/hooks/$hook.d/$script"
     ln -s "$PROJECT_DIR/.github/hooks/$hook/$script" "$PROJECT_DIR/.git/hooks/$hook.d/"
-    chmod +x "$PROJECT_DIR/.github/hooks/$hook/$script"
+    chmod +x "$PROJECT_DIR/.git/hooks/$hook.d/$script"
   done
 done
