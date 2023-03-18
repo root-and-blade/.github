@@ -98,6 +98,8 @@ done
 exit 0
 EOT
 
+  chmod +x "$PROJECT_DIR/.git/hooks/pre-push"
+
 
   # Copy our hooks over
   echo "  Linking new project '$hook' hooks..."
