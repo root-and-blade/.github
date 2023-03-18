@@ -1,0 +1,28 @@
+#!/bin/sh
+
+##
+# This git hook will run the same commands that GitHub will run with the Pull Request locally prior to completing a
+# push. This helps both developers and the organization by giving developers insight into whether the upcoming
+# CI/CD pipeline will pass without having to wait for GitHub Actions to complete. It also helps the organization by
+# reducing the number of failed actions that occur, reducing the number of GitHub action minutes (and therefore, costs)
+# that are used for failures.
+#
+# This script requires that following are installed on your platform:
+#
+#   * Docker (https://www.docker.com/)
+#   * Act (https://github.com/nektos/act)
+#
+# On macOS, you can install both with this command:
+#
+#   brew install act && brew install --cask docker
+#
+# For macOS platforms running on Apple Silicon (e.g., M1 CPUs), please make sure to refer to this repository's
+# `README.md` file for further instructions on running tests locally.
+#
+# To install this hook, simply copy or symlink this file to any repository's `.git/hooks` directory; for example:
+#
+#   ln -s .github/hooks/pre-push.pull-requests-tests my_repository/.git/hooks/
+#
+
+echo "RUNNING PULL REQUESTS TESTS"
+exit 1

@@ -9,14 +9,15 @@ For developers working on this `.github` repository, please ensure you do the fo
 1. Clone this repository
 2. Ensure both Docker and [`act`][act] are installed on the system
 3. Update your settings, as described below, if running on Apple Silicon
-4. Install the CI test hook to ensure tests pass before pushing:
+4. Install the hooks for this repository by running:
 
 ```shell
-ln -s .github/hooks/pre-push.ci-tests .git/hooks/
+./.github/install-hooks.sh
 ```
 
 This will ensure that you are following the standards of this repository prior to uploading to the R&B repository
-(saving you time and the company money!).
+(saving you time and the company money!). You can run the install hooks script as many times as you wish, and it will
+ensure that any existing hooks are maintained.
 
 ## Testing
 
