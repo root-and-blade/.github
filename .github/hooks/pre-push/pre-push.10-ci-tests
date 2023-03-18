@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 ##
 # This git hook will run the same commands that GitHub will run with the Pull Request locally prior to completing a
@@ -24,5 +24,25 @@
 #   ln -s .github/hooks/pre-push.pull-requests-tests my_repository/.git/hooks/
 #
 
-echo "RUNNING PULL REQUESTS TESTS"
-exit 1
+echo "Running CI/CD Pull Requests Tests"
+echo
+echo "Thank you for running these! These exact tests will be run when you create a pull request for these changes. This"
+echo "saves you time and the organization money on resources. At any time, you can run these tests, manually, by"
+echo "running the following command:"
+echo
+echo "    act pull_request"
+echo
+
+if ! command -v act &> /dev/null; then
+  echo "ERROR! Running CI/CD tests requires that 'act' be installed." >&2
+  echo >&2
+  echo "Please refer to the act instructions on how to install:" >&2
+  echo >&2
+  echo "    https://github.com/nektos/act#installation-through-package-managers" >&2
+  echo >&2
+
+  exit 1
+fi
+
+cd "$GIT_DIR/.."
+act --container-architecture linux/amd64 pull_request

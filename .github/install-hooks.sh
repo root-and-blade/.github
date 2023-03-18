@@ -2,7 +2,7 @@
 
 # Constants
 PROJECT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )/.." &> /dev/null && pwd )
-BACKUP_DIR=$(mktemp -d -t rab_git_hooks)
+BACKUP_DIR=$(mktemp -d -t rnb_git_hooks)
 
 
 # Environmental checks
@@ -18,8 +18,7 @@ fi
 
 
 # Create a backup of the existing hooks folder, in case of error
-echo "Creating backup of existing hooks in case of error..."
-
+echo "Backing up existing hooks..."
 cp -r "$PROJECT_DIR/.git/hooks/" "$BACKUP_DIR/"
 
 
@@ -29,13 +28,13 @@ on_error() {
   echo >&2
   echo "### Error encountered (line $(caller))" >&2
   echo >&2
-  echo "Reverting changes from backup." >&2
+  echo "Restoring hooks from backup..." >&2
 
   rm -rf "$PROJECT_DIR/.git/hooks"
   mkdir -p "$PROJECT_DIR/.git/hooks"
   cp -r "$BACKUP_DIR/" "$PROJECT_DIR/.git/hooks"
 
-  echo "Backup restored; exiting." >&2
+  echo "Backup restored; aborting." >&2
   exit 3
 }
 
@@ -63,6 +62,7 @@ for dir in */; do
       1)
         echo "  Moving existing '$hook' file to run first in new set..."
         mv "$PROJECT_DIR/.git/hooks/$hook" "$PROJECT_DIR/.git/hooks/$hook.d/$hook.00-original"
+        chmod +x "$PROJECT_DIR/.git/hooks/$hook.d/$hook.00-original"
 
         # Strip git lfs from the original, since we deal with it later
         grep -v "git lfs $hook \"\$@\"" "$PROJECT_DIR/.git/hooks/$hook.d/$hook.00-original" > temp; mv temp "$PROJECT_DIR/.git/hooks/$hook.d/$hook.00-original"
