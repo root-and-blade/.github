@@ -1,0 +1,28 @@
+{
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/**",
+    "**/.pnpm-lock.json",
+    ".gitignore",
+    ".gitattributes",
+    ".vscode",
+    "megalinter",
+    "megalinter-reports",
+    "package-lock.json",
+    "report"
+  ],
+  "language": "en",
+  "noConfigSearch": true,
+  "words": [
+    "andrewvaughan",
+    "contributorsrc",
+    "mailxto",
+    "megalinter",
+    "oxsecurity",
+    "rootandblade",
+    "stefanzweifel",
+    "venv"
+  ],
+  "version": "0.2"
+}
