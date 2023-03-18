@@ -63,6 +63,9 @@ for dir in */; do
       1)
         echo "  Moving existing '$hook' file to run first in new set..."
         mv "$PROJECT_DIR/.git/hooks/$hook" "$PROJECT_DIR/.git/hooks/$hook.d/$hook.00-original"
+
+        # Strip git lfs from the original, since we deal with it later
+        grep -v "git lfs $hook \"\$@\"" "$PROJECT_DIR/.git/hooks/$hook.d/$hook.00-original" > temp; mv temp "$PROJECT_DIR/.git/hooks/$hook.d/$hook.00-original"
         ;;
 
       # Our marker existed, we can ignore this
@@ -94,6 +97,9 @@ for hook in *; do
         exit \$RESULT
     fi
 done
+
+# Run git lfs, since it does a check that it's run from this exact file (for some annoying reason)
+git lfs pre-push "\$@"
 
 exit 0
 EOT
