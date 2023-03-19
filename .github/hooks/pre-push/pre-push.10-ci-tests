@@ -19,9 +19,9 @@
 # For macOS platforms running on Apple Silicon (e.g., M1 CPUs), please make sure to refer to this repository's
 # `README.md` file for further instructions on running tests locally.
 #
-# To install this hook, simply copy or symlink this file to any repository's `.git/hooks` directory; for example:
+# To install this hook, run the provided utility:
 #
-#   ln -s .github/hooks/pre-push.pull-requests-tests my_repository/.git/hooks/
+#   .github/install-hooks.sh
 #
 
 echo "Running CI/CD Pull Requests Tests"
