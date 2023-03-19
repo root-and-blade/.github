@@ -21,6 +21,11 @@ trim_trailing_whitespace = true
 max_line_length = 120
 
 
+[*.md]
+indent_style = space
+indent_size = 4
+
+
 [*.py, *.sh]
 indent_style = space
 indent_size = 4
