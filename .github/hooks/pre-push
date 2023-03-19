@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+# Do not manually modify or add this hook to your repository. Please use the ``.github/install-hooks.py` utility.
 
 ##
 # This git hook will run the same commands that GitHub will run with the Pull Request locally prior to completing a
@@ -24,8 +24,6 @@
 #   .github/install-hooks.sh
 #
 
-GIT_DIR=$(git rev-parse --git-dir)
-
 echo "Running CI/CD Pull Requests Tests"
 echo
 echo "Thank you for running these! These exact tests will be run when you create a pull request for these changes. This"
@@ -46,5 +44,4 @@ if ! command -v act &> /dev/null; then
   exit 1
 fi
 
-cd "$GIT_DIR/.."
 act --container-architecture linux/amd64 pull_request
