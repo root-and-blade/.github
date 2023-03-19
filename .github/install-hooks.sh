@@ -65,7 +65,8 @@ for dir in */; do
         chmod +x "$PROJECT_DIR/.git/hooks/$hook.d/$hook.00-original"
 
         # Strip git lfs from the original, since we deal with it later
-        grep -v "git lfs $hook \"\$@\"" "$PROJECT_DIR/.git/hooks/$hook.d/$hook.00-original" > temp; mv temp "$PROJECT_DIR/.git/hooks/$hook.d/$hook.00-original"
+        grep -v "git lfs $hook \"\$@\"" "$PROJECT_DIR/.git/hooks/$hook.d/$hook.00-original" > temp \
+          && mv temp "$PROJECT_DIR/.git/hooks/$hook.d/$hook.00-original"
         ;;
 
       # Our marker existed, we can ignore this
