@@ -8,7 +8,7 @@ description = "GitHub special folder for documentation; no Python packages inclu
 license = "Proprietary"
 
 authors = [
-  { name = "Andrew Vaughan", email = "andrew@rootandblades.com" },
+  { name = "Andrew Vaughan", email = "andrew@rootandblade.co" },
 ]
 
 readme = "README.md"

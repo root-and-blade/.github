@@ -1,11 +1,11 @@
-# Root and Blades
+# Root & Blade
 
 This repository contains the public profile for Root & Blade, LLC. For members, please visit the
 [.github-private][gh-private] repository for more details on contributing, policies, automation, and more.
 
 ## License
 
-Copyright &copy; 2023 Root and Blades, LLC. All Rights Reserved.
+Copyright &copy; 2023 Root & Blade, LLC. All Rights Reserved.
 
 <!-- editorconfig-checker-disable -->
 
