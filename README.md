@@ -12,6 +12,7 @@ For developers working on this `.github` repository, please ensure you do the fo
 4. Install the hooks for this repository by running:
 
 ```shell
+git lfs install
 ./.github/install-hooks.sh
 ```
 

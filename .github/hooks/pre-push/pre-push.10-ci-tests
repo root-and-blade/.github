@@ -24,6 +24,8 @@
 #   .github/install-hooks.sh
 #
 
+GIT_DIR=$(git rev-parse --git-dir)
+
 echo "Running CI/CD Pull Requests Tests"
 echo
 echo "Thank you for running these! These exact tests will be run when you create a pull request for these changes. This"
