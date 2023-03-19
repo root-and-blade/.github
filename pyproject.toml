@@ -1,0 +1,38 @@
+######################################################################################################################
+# Python Configurations
+#
+
+[project]
+name = ".github"
+description = "GitHub special folder for documentation; no Python packages included."
+license = "Proprietary"
+
+authors = [
+  { name = "Andrew Vaughan", email = "andrew@rootandblades.com" },
+]
+
+readme = "README.md"
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: Other/Proprietary License",
+  "Natural Language :: English",
+  "Topic :: Documentation"
+]
+
+# To identify, run `vermin` on the Python files in the project
+# https://github.com/netromdk/vermin
+requires-python = ">=3.6"
+
+dependencies = [
+]
+
+
+
+##
+# Black Linter via Mega-Linter
+#
+# https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-format
+#
+[tool.black]

@@ -22,6 +22,7 @@
     "megalinter",
     "mktemp",
     "oxsecurity",
+    "pyproject",
     "rootandblade",
     "stefanzweifel",
     "venv"
