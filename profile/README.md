@@ -11,4 +11,4 @@ currently in stealth mode, and we will have more information with future product
 
 <!-- Link References -->
 
-[root-and-blade-logo]: img/profile-hero.png
+[root-and-blade-logo]: https://media.githubusercontent.com/media/root-and-blade/.github/main/profile/img/profile-hero.png

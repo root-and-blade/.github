@@ -10,7 +10,7 @@ For developers working on this `.github` repository, please perform the followin
 2. Install the following dependencies:
     1. [Docker][docker]
     2. [`act`][act]
-    3. ['npx'][npx]
+    3. [`npx`][npx]
     4. [Python3][python]
 3. Follow the Caveats below, if running on Apple Silicon (e.g., M1)
 4. Install required hooks with the following two commands:
