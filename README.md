@@ -13,7 +13,6 @@ For developers working on this `.github` repository, please ensure you do the fo
 
 ```shell
 git lfs install
-./.github/install-hooks.sh
 ```
 
 This will ensure that you are following the standards of this repository prior to uploading to the R&B repository
