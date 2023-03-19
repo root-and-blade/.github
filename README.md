@@ -4,20 +4,32 @@ This repository contains all default policies and automation used with Root and 
 
 ## Dependencies
 
-For developers working on this `.github` repository, please ensure you do the following prior to making a contribution:
+For developers working on this `.github` repository, please perform the following steps to contribute:
 
 1. Clone this repository
-2. Ensure both [Docker][docker] and [`act`][act] are installed on the system (`npx` is helpful for some things, as well)
-3. Update your settings, as described below, if running on Apple Silicon
-4. Install the hooks for this repository by running:
+2. Install the following dependencies:
+   1. [Docker][docker]
+   2. [`act`][act]
+   3. ['npx'][npx]
+   4. [Python3][python]
+3. Follow the Caveats below, if running on Apple Silicon chipsets
+4. Install required hooks with the following two commands:
 
 ```shell
 git lfs install
+.github/install-hooks.py
 ```
 
-This will ensure that you are following the standards of this repository prior to uploading to the R&B repository
-(saving you time and the company money!). You can run the install hooks script as many times as you wish, and it will
-ensure that any existing hooks are maintained.
+While the repository hooks installed with the `install-hooks.py` script are optional, they are extremely important to
+ensure that we do not go over our limited budget for CI/CD server minutes with GitHub. Alternatively, you can run
+integration tests manually by running:
+
+```shell
+act pull_request
+```
+
+This mimics the environment and tests that will be run once a Pull Request is opened for your work. This will be run
+automatically with `git push` if you install the hook package.
 
 ### Caveat for macOS Devices with Apple Silicon (M1) Chips
 
@@ -42,20 +54,23 @@ Running the tests again sometimes resolves these issues. We are still working on
 If you believe that you have a clean install, and you have installed this project's pre-push hooks, you can force a push
 to CI/CD by the command:
 
-```bash
+```shell
 git push --no-verify
 ```
+
+This does not bypass the CI/CD pipeline on GitHub, however.
 
 If you run into errors unrelated to normal linting or the occasional `VmTracker` failure, please let the Operations team
 know as soon as possible by opening an [Operations Issue][ops-issue] in the appropriate repository.
 
 ## Contribution Steps
 
-1. Make your changes
-2. Run `npx prettier -uc .` to check for any formatting standard issues
-3. Run `act pull_request` (if you have not installed the pre-commit hooks)
-4. Commit with an informative message
-5. Push and PR!
+1. Create a new branch
+2. Make your changes
+3. Run `npx prettier -uc .` to check for any formatting standard issues (and `npx prettier -uw .` to fix)
+4. Run `act pull_request` (if you have not installed the pre-commit hooks)
+5. Commit with an informative message
+6. Push and create a Pull Request on to the `main` branch
 
 ## Testing
 
@@ -88,4 +103,6 @@ Copyright &copy; 2023 Root and Blades, LLC. All Rights Reserved.
 [act-token]: https://github.com/nektos/act#github_token
 [docker]: https://docker.com
 [docker-rosetta]: img/macos-m1-docker-settings.png
+[npx]: https://www.npmjs.com/package/npx
 [ops-issue]: https://github.com/root-and-blades/.github/issues/new/choose
+[python]: https://www.python.org/downloads/

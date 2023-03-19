@@ -1,5 +1,7 @@
 <!-- markdownlint-disable -->
+
 ![Root & Blade, LLC][root-and-blade-logo]
+
 <!-- markdownlint-restore -->
 
 # Welcome
