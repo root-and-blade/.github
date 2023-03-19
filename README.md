@@ -97,7 +97,7 @@ repository. Please be careful when testing and refer to each repository's indivi
 
 Copyright &copy; 2023 Root and Blades, LLC. All Rights Reserved.
 
-<!-- Link Repository -->
+<!-- editorconfig-checker-disable -->
 
 [act]: https://github.com/nektos/act
 [act-token]: https://github.com/nektos/act#github_token
@@ -106,3 +106,5 @@ Copyright &copy; 2023 Root and Blades, LLC. All Rights Reserved.
 [npx]: https://www.npmjs.com/package/npx
 [ops-issue]: https://github.com/root-and-blades/.github/issues/new/choose
 [python]: https://www.python.org/downloads/
+
+<!-- editorconfig-checker-enable -->

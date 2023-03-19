@@ -9,6 +9,8 @@
 Root & Blade, LLC is a privately-held company aimed at producing best-in-market web and mobile applications. We are
 currently in stealth mode, and we will have more information with future product announcements on this page.
 
-<!-- Link References -->
+<!-- editorconfig-checker-disable -->
 
 [root-and-blade-logo]: https://media.githubusercontent.com/media/root-and-blade/.github/main/profile/img/profile-hero.png
+
+<!-- editorconfig-checker-enable -->
