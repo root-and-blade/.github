@@ -9,6 +9,6 @@ Copyright &copy; 2023 Root and Blades, LLC. All Rights Reserved.
 
 <!-- editorconfig-checker-disable -->
 
-[gh-private]: https://github.com/root-and-blade/.github-private
+[gh-private]: https://github.com/root-and-blade/.github-private         <!-- markdown-link-check-disable-line -->
 
 <!-- editorconfig-checker-enable -->
