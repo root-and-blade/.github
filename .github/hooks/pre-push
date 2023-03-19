@@ -1,0 +1,47 @@
+# Do not manually modify or add this hook to your repository. Please use the ``.github/install-hooks.py` utility.
+
+##
+# This git hook will run the same commands that GitHub will run with the Pull Request locally prior to completing a
+# push. This helps both developers and the organization by giving developers insight into whether the upcoming
+# CI/CD pipeline will pass without having to wait for GitHub Actions to complete. It also helps the organization by
+# reducing the number of failed actions that occur, reducing the number of GitHub action minutes (and therefore, costs)
+# that are used for failures.
+#
+# This script requires that following are installed on your platform:
+#
+#   * Docker (https://www.docker.com/)
+#   * Act (https://github.com/nektos/act)
+#
+# On macOS, you can install both with this command:
+#
+#   brew install act && brew install --cask docker
+#
+# For macOS platforms running on Apple Silicon (e.g., M1 CPUs), please make sure to refer to this repository's
+# `README.md` file for further instructions on running tests locally.
+#
+# To install this hook, run the provided utility:
+#
+#   .github/install-hooks.sh
+#
+
+echo "Running CI/CD Pull Requests Tests"
+echo
+echo "Thank you for running these! These exact tests will be run when you create a pull request for these changes. This"
+echo "saves you time and the organization money on resources. At any time, you can run these tests, manually, by"
+echo "running the following command:"
+echo
+echo "    act pull_request"
+echo
+
+if ! command -v act &> /dev/null; then
+  echo "ERROR! Running CI/CD tests requires that 'act' be installed." >&2
+  echo >&2
+  echo "Please refer to the act instructions on how to install:" >&2
+  echo >&2
+  echo "    https://github.com/nektos/act#installation-through-package-managers" >&2
+  echo >&2
+
+  exit 1
+fi
+
+act --container-architecture linux/amd64 pull_request

@@ -1,0 +1,32 @@
+######################################################################################################################
+# Configuration file for MegaLinter
+# See all available variables at https://megalinter.io/configuration/ and in linters documentation
+#
+
+APPLY_FIXES: none
+FILEIO_REPORTER: false
+FLAVOR_SUGGESTIONS: true
+IGNORE_GITIGNORED_FILES: true
+LINTER_RULES_PATH: .
+PRINT_ALPACA: false
+SHOW_ELAPSED_TIME: true
+SHOW_SKIPPED_LINTERS: false
+VALIDATE_ALL_CODEBASE: false
+
+# We conform to the Black style guide
+PYTHON_BLACK_DISABLE_ERRORS: false
+
+ENABLE:
+  - ACTION
+  - COPYPASTE
+  - EDITORCONFIG
+  - ENV
+  - JSON
+  - MARKDOWN
+  - PYTHON
+  - REPOSITORY
+  - SPELL
+  - YAML
+
+DISABLE_LINTERS:
+  - MARKDOWN_MARKDOWN_TABLE_FORMATTER # Not necessary with prettier and often conflicts
