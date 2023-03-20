@@ -13,9 +13,6 @@ SHOW_ELAPSED_TIME: true
 SHOW_SKIPPED_LINTERS: false
 VALIDATE_ALL_CODEBASE: false
 
-# We conform to the Black style guide
-PYTHON_BLACK_DISABLE_ERRORS: false
-
 ENABLE:
   - ACTION
   - COPYPASTE
@@ -30,3 +27,7 @@ ENABLE:
 
 DISABLE_LINTERS:
   - MARKDOWN_MARKDOWN_TABLE_FORMATTER # Not necessary with prettier and often conflicts
+
+# We conform to the Black style guide
+PYTHON_BLACK_DISABLE_ERRORS: false
+#PYTHON_BANDIT_CONFIG_FILE: pyproject.toml # Bandit Configurations (disabled until Issue #1 is resolved)

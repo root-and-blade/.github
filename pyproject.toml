@@ -2,13 +2,20 @@
 # Python Configurations
 #
 
-[project]
-name = ".github"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+name = "github"
 description = "GitHub special folder for documentation; no Python packages included."
+version = "0.1.0"
 license = "Proprietary"
 
 authors = [
-  { name = "Andrew Vaughan", email = "andrew@rootandblade.co" },
+    "Andrew Vaughan <hello@andrewvaughan.io>",
 ]
 
 readme = "README.md"
@@ -18,21 +25,30 @@ classifiers = [
   "Intended Audience :: Developers",
   "License :: Other/Proprietary License",
   "Natural Language :: English",
-  "Topic :: Documentation"
+  "Topic :: Documentation",
 ]
 
-# To identify, run `vermin` on the Python files in the project
-# https://github.com/netromdk/vermin
-requires-python = ">=3.6"
-
-dependencies = [
+packages = [
+  { include = "github" },
 ]
-
 
 
 ##
-# Black Linter via Mega-Linter
+# Production dependencies
 #
-# https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-format
+[tool.poetry.dependencies]
+
+# To identify, run `vermin` on the Python files in the project
+# https://github.com/netromdk/vermin
+python = "^3.7"
+
+
+##
+# bandit security risk checker
 #
-[tool.black]
+# https://bandit.readthedocs.io/
+#
+# [tool.bandit]
+# exclude_dirs = [
+#   ".github/install-hooks.py",
+# ]

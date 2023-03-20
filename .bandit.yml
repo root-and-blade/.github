@@ -1,0 +1,4 @@
+# Temporary file: https://github.com/root-and-blade/.github-private/issues/1
+---
+exclude_dirs:
+  - .github/install-hooks.py
