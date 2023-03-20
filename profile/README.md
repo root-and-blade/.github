@@ -11,6 +11,6 @@ currently in stealth mode, and we will have more information with future product
 
 <!-- editorconfig-checker-disable -->
 
-[root-and-blade-logo]: https://media.githubusercontent.com/media/root-and-blade/.github/main/profile/img/root-and-blade--banner--2048x513--github-public.png
+[root-and-blade-logo]: https://media.githubusercontent.com/media/root-and-blade/.github/main/profile/img/root-and-blade--banner--2048x512--github-public.png
 
 <!-- editorconfig-checker-enable -->
