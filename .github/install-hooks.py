@@ -93,5 +93,8 @@ for hook in hooks:
         for line in clean_lines:
             f.write(f"{line}\n")
 
+    # Ensure that the file is executable
+    os.chmod(hook_file, 0o755)
+
 # All done
 print("\nDone!")
