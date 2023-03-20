@@ -1,0 +1,120 @@
+########################################################################################################################
+# Configuration for the Feature Request issue template available for all Root & Blade GitHub repositories.
+#
+# @link https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository # editorconfig-checker-disable-line
+#
+---
+name: Feature Request
+description: |
+  Request updates or additions to functionality of the application or service.
+
+title: "Feature Request: "
+
+labels:
+  - "Request: Feature"
+  - "Priority: 03-Normal"
+  - "Status: 01-Pending"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank you
+
+        > Thank you for taking the time to help make our products better! Please follow the instructions for each
+        > section below.
+
+  #
+  # New or Updated
+  #
+  - type: dropdown
+    id: update_or_novel
+    attributes:
+      label: Is this a new feature?
+      description: |
+        Is this an update to an existing feature, or something novel to the application or service?
+      options:
+        - New Feature
+        - Update to Existing Feature
+    validations:
+      required: true
+
+  #
+  # Product Name
+  #
+  - type: checkboxes
+    id: product
+    attributes:
+      label: What product(s) does this impact?
+      description: |
+        Which Root & Blade product(s) does this issue impact?
+      options:
+        - label: rootandblade.co
+        - label: betterlawn.app (Website)
+        - label: BetterLawn (iOS app)
+        - label: BetterLawn (Android app)
+
+  #
+  # Summary
+  #
+  - type: textarea
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: |
+        Please describe, in detail, what feature you would like to see added or updated in the platform?
+      placeholder: |
+        We will discuss motivations later, simply stick to what the feature should do here.
+    validations:
+      required: true
+
+  #
+  # Motivation
+  #
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: |
+        Why should this feature be prioritized? Who is impacted and how?
+      placeholder: |
+        The more viable and desirable a feature is, the higher it will land on our priority list.
+    validations:
+      required: true
+
+  #
+  # Examples
+  #
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples
+      description: |
+        Do you have any examples or references you can share of this feature working in other products?
+    validations:
+      required: false
+
+  #
+  # Other Details
+  #
+  - type: textarea
+    id: other_details
+    attributes:
+      label: Other Details
+      description: |
+        If there is anything else helpful that you think we should know, please include it here.
+    validations:
+      required: false
+
+  #
+  # Terms and Conditions
+  #
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: |
+        By submitting this Issue, you agree to follow our Code of Conduct (available in `CODE_OF_CONDUCT.md`)
+      options:
+        - label: I agree to follow this project's Code of Conduct.
+          required: true

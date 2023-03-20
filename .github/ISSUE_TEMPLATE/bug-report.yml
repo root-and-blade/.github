@@ -1,0 +1,200 @@
+########################################################################################################################
+# Configuration for the Bug Report issue template available for all Root & Blade GitHub repositories.
+#
+# @link https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository # editorconfig-checker-disable-line
+#
+#
+---
+name: Bug Report
+description: |
+  Report information regarding a suspected bug in an application or service.
+
+title: "Bug Report: "
+
+labels:
+  - "Request: Bug Fix"
+  - "Priority: 03-Normal"
+  - "Status: 01-Pending"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank you
+
+        > Thank you for taking the time to fill out a bug report. Please follow the instructions for each section below.
+
+  #
+  # Product Name
+  #
+  - type: checkboxes
+    id: product
+    attributes:
+      label: What product(s) does this impact?
+      description: |
+        Which Root & Blade product(s) does this issue impact?
+      options:
+        - label: rootandblade.co
+        - label: betterlawn.app (Website)
+        - label: BetterLawn (iOS app)
+        - label: BetterLawn (Android app)
+
+  #
+  # Severity
+  #
+
+  # editorconfig-checker-disable
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: |
+        Using your best judgement, please choose how impactful this issue is to yourself and other users on the site.
+        Please use these descriptions as guidance for which to choose:
+
+        * (S1) Blocker - The entire application (or a major piece of functionality) is failing.
+        * (S2) Critical - Key functionality in the application is failing and/or a majority of users are impacted.
+        * (S3) Major - An error that deviates from business logic or disrupts the application without having a vital impact.
+        * (S4) Minor - A defect that does not impact the application's core functionality (e.g., design issues).
+        * (S5) Trivial - An issue that doesn't effect the functionality or operation of the application, but will need attention (e.g., typos).
+      options:
+        - (S1) Blocker
+        - (S2) Critical
+        - (S3) Major
+        - (S4) Minor
+        - (S5) Trivial
+    validations:
+      required: true
+
+  # editorconfig-checker-disable
+
+  #
+  # Operating System
+  #
+  - type: dropdown
+    id: operating_system
+    attributes:
+      label: Operating System
+      description: |
+        What operating system were you using at the time?
+      options:
+        - macOS
+        - Linux
+        - Windows
+        - Android (Mobile)
+        - iOS (Mobile)
+        - Other (Describe in "Other Details")
+    validations:
+      required: true
+
+  #
+  # Browser
+  #
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser(s)
+      description: |
+        What web browser(s) were you using at the time (if applicable)?
+      options:
+        - Chrome
+        - Firefox
+        - Microsoft Edge
+        - Opera
+        - Safari
+        - Native Mobile App
+        - Other (Describe in "Other Details")
+      multiple: true
+    validations:
+      required: false
+
+  #
+  # Reproduction Steps
+  #
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: Reproduction Steps
+      description: |
+        Please describe, in detail, the steps someone should take to reproduce the issue.
+      placeholder: |
+        Please be as descriptive as possible. Issues that cannot be reproduced may be closed without being addressed.
+      value: |
+        In order to reproduce the bug, please perform the following steps:
+
+        1.
+        2.
+        3.
+        4.
+    validations:
+      required: true
+
+  #
+  # Expected Results
+  #
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: Expected Results
+      description: |
+        What did you expect to happen when following the steps above?
+      placeholder: |
+        This helps us to identify whether this is an intended feature of the application or an actual bug.
+    validations:
+      required: true
+
+  #
+  # Actual Results
+  #
+  - type: textarea
+    id: actual_result
+    attributes:
+      label: Actual Results
+      description: |
+        What actually happened, instead?
+      placeholder: |
+        Please be as descriptive as reasonable.
+    validations:
+      required: true
+
+  #
+  # Log Data
+  #
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log Dump
+      description: |
+        If you have any logs from the application, please provide them here.
+      placeholder: |
+        We recommend turning on any debug or verbose modes, if possible, to get as much information from the logs as
+        possible. Feel free to trim down the logs to the relevant sections, if appropriate.
+      render: Shell
+    validations:
+      required: false
+
+  #
+  # Other Details
+  #
+  - type: textarea
+    id: other_details
+    attributes:
+      label: Other Details
+      description: |
+        If there is anything else helpful that you think we should know, please include it here.
+    validations:
+      required: false
+
+  #
+  # Terms and Conditions
+  #
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: |
+        By submitting this Issue, you agree to follow our Code of Conduct (available in `CODE_OF_CONDUCT.md`)
+      options:
+        - label: I agree to follow this project's Code of Conduct.
+          required: true

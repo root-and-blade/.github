@@ -1,0 +1,28 @@
+########################################################################################################################
+# Configuration for GitHub template chooser, as documented here:
+#
+# @link https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#configuring-the-template-chooser # editorconfig-checker-disable-line
+#
+---
+# Allow for catch-all issues, too, for Product teams
+blank_issues_enabled: true
+
+# Various contact links for reaching out to Root & Blade teams
+contact_links:
+  - name: Outage / Critical Platform Issue
+    url: https://rootandblade.slack.com/archives/C04UV3EV5SP
+    about: |
+      Please alert us to any critical issues with platforms (e.g., outages, apparent hacks, etc.) via the Slack channel
+      #platform-status. Make sure to use the @everyone tag to alert the team on the issue you found!
+
+  - name: Product Support
+    url: https://rootandblade.slack.com/archives/C04UNJS06NA
+    about: |
+      Priorities and most issues are managed by the Product team. If you have questions for them or would prefer to work
+      with someone from the Product team, directly, please ask in the #product channel by following this link.
+
+  - name: DevOps Support
+    url: https://rootandblade.slack.com/archives/C04US8S8H4M
+    about: |
+      For any questions about infrastructure, security, uptime, performance, or launching new architectures, please
+      partner with the DevOps team by visiting the #devops channel at this link.
