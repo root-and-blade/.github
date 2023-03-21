@@ -4,14 +4,14 @@ PLEASE READ:
 PRs must be linked to an issue either through commit message. Ideally, this is a squashed commit with the PR title being
 the commit summary. This should follow the format:
 
-  "Description of Change (XXXXX #NNN)"
+    "Description of Change (XXXXX #NNN)"
 
-  Where XXXX describes the action to take against the issue this PR addresses, being:
+    Where XXXX describes the action to take against the issue this PR addresses, being:
 
-    * Closes
-    * Fixes
-    * Resolves
-    * Refs
+        * Closes
+        * Fixes
+        * Resolves
+        * Refs
 
   In each case, with the exception of "Refs", the linked issue will be automatically closed when merged. "Refs" is a
   special case intended to leave an issue open, but to merge a PR anyway (this should be used sparingly).
