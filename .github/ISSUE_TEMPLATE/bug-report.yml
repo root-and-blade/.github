@@ -14,30 +14,26 @@ title: "Bug Report: "
 labels:
   - "Request: Bug Fix"
   - "Priority: 03-Normal"
-  - "Status: 01-Pending"
+  - "Status: 00-Pending"
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## Thank you
-
-        > Thank you for taking the time to fill out a bug report. Please follow the instructions for each section below.
-
   #
   # Product Name
   #
-  - type: checkboxes
+  - type: dropdown
     id: product
     attributes:
       label: What product(s) does this impact?
       description: |
         Which Root & Blade product(s) does this issue impact?
       options:
-        - label: rootandblade.co
-        - label: betterlawn.app (Website)
-        - label: BetterLawn (iOS app)
-        - label: BetterLawn (Android app)
+        - rootandblade.co
+        - betterlawn.app (Website)
+        - BetterLawn (Mobile App)
+        - Other (Describe in "Other Details")
+      multiple: true
+    validations:
+      required: true
 
   #
   # Severity
@@ -67,7 +63,7 @@ body:
     validations:
       required: true
 
-  # editorconfig-checker-disable
+  # editorconfig-checker-enable
 
   #
   # Operating System
