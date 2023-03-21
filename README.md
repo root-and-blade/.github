@@ -7,9 +7,11 @@ This repository contains the public profile for Root & Blade, LLC. For members, 
 
 Copyright &copy; 2023 Root & Blade, LLC. All Rights Reserved.
 
+<!-- prettier-ignore-start -->
 <!-- editorconfig-checker-disable -->
 
 <!-- markdown-link-check-disable-next-line -->
 [gh-private]: https://github.com/root-and-blade/.github-private
 
 <!-- editorconfig-checker-enable -->
+<!-- prettier-ignore-end -->
